@@ -1,0 +1,111 @@
+contact_info:
+  name:
+    first: Jonathan
+    middle: D
+    last: Hartman
+  phone: (703) 868-7573
+  email: j@p4nt5.com
+  address:
+    city: Seattle
+    state: WA
+  links:
+    - name: Twitter
+      id: "@roboticcheese"
+      url: https://twitter.com/roboticcheese
+    - name: LinkedIn
+      id: roboticcheese
+      url: https://www.linkedin.com/in/roboticcheese
+    - name: GitHub
+      id: roboticcheese
+      url: https://github.com/roboticcheese
+
+summary: Systems Engineer passionate about automation, testing, and the continuing evolution of DevOps practices.
+
+experience:
+  - employer: Self
+    start_date: 03/2014
+    end_date: Present
+    roles:
+      - title: Engineering Ronin
+        start_date: 03/2014
+        end_date: Present
+        highlights:
+          - Authoring new Chef community cookbooks and Ruby libraries
+          - Learning new system languages, e.g. Go and Rust
+          - Replacing personal cloud servers with a Docker ecosystem cluster
+  - employer: Rackspace Hosting
+    note: prev. Webmail.us, acquired 2007
+    start_date: 12/2005
+    end_date: 03/2014
+    roles:
+      - title: Technical Lead, Mail Routing
+        start_date: 2012
+        end_date: 2014
+        highlights:
+          - Led adoption of Test-Driven Infrastructure practices and tools
+          - Served as escalation point for outages and general infrastructure queries
+      - title: Linux Systems Engineer III, SMTP
+        start_date: 2011
+        end_date: 2012
+        highlights:
+          - Began adoption of Chef to better automate server provisioning and configuration 
+          - "Wrote Lua and Sieve modules and tests for Message Systems' Momentum MTA"
+      - title: Anti-Abuse Engineer
+        start_date: 2010
+        end_date: 2011
+        highlights:
+          - Responsible for all email anti-spam systems and spearheading new anti-spam efforts 
+          - Wrote a Microsoft Outlook plugin for reporting spam filtering errors
+          - Wrote a spam classification app using Google Prediction API
+      - title: Engineering Team Lead
+        start_date: 2007
+        end_date: 2008
+        highlights:
+          - Led team responsible for growing infrastructure from several servers to several hundred
+          - Oversaw growth of Ops team from one engineer to seven
+          - Authored first formal documentation of email infrastructure
+      - title: Customer Support Engineer
+        start_date: 2005
+        end_date: 2007
+          - Handled all operations duties for a rapidly-growing, enterprise email hosting startup
+          - Served as the main escalation point for support requests
+          - Worked with CTO and System Architect to begin automation of server provisioning
+    - employer: Micro Electronics, Inc.
+      start_date: 2001
+      end_date: 2005
+      roles:
+        - title: Merchandising
+          start_date: 2004
+          end_date: 2005
+          highlights:
+            - Worked with store managers to plan and execute product display placement
+        - title: Sales/Support
+          start_date: 2001
+          end_date: 2004
+          highlights:
+            - Provided in-person and phone support for retail consumer electronics purchases
+
+education:
+  - institution: George Mason University
+    city: Fairfax
+    state: VA
+    start_date: 2001
+    end_date: 2005
+    curriculum:
+      - Philosophy
+      - Computer Science
+      - "Women's Studies"
+  - institution: Hampshire College
+    city: Amherst
+    state: MA
+    start_date: 2000
+    end_date: 2001
+    curriculum:
+      - Computer Science
+      - Political Science
+
+certifications:
+  - name: Red Hat Certified Engineer
+    start_date: 11/2012
+    end_date: 11/2015
+    id: 120-143-557
