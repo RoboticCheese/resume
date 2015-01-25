@@ -9,15 +9,18 @@ contact_info:
     city: Seattle
     state: WA
   links:
-    - name: Twitter
-      id: "@roboticcheese"
-      url: https://twitter.com/roboticcheese
     - name: LinkedIn
       id: roboticcheese
       url: https://www.linkedin.com/in/roboticcheese
+      icon: fa fa-linkedin-square fa-2x
     - name: GitHub
       id: roboticcheese
       url: https://github.com/roboticcheese
+      icon: fa fa-github-square fa-2x
+    - name: Twitter
+      id: "@roboticcheese"
+      url: https://twitter.com/roboticcheese
+      icon: 
 
 summary: Systems Engineer passionate about automation, testing, and the continuing evolution of DevOps practices.
 
