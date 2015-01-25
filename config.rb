@@ -69,4 +69,10 @@ configure :build do
 
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
+
+  # Enable deployment to GitHub Pages
+  activate :deploy do |deploy|
+    deploy.build_before = true
+    deploy.method = :git
+  end
 end
