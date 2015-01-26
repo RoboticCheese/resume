@@ -1,10 +1,65 @@
 ---
-title: Welcome to Middleman
+title: Résumé for <%= data.resume.contact_info.name.values.join(' ') %>
 ---
 
-<div class="welcome">
-  <h1>Middleman is Watching</h1>
-  <p class="doc">
-    <%= link_to "Read Online Documentation", "http://middlemanapp.com/" %>
-  </p><!-- .doc -->
-</div><!-- .welcome -->
+<div id="resume" class="hresume">
+  <div id="contact">
+    <address class="vcard">
+      <span class="fn"><%= data.resume.contact_info.name.values.join(' ') %></span>
+      <span class="adr">
+        <span class="street-address"><%= data.resume.contact_info.address.street %></span>
+        <span class="locality"><%= data.resume.contact_info.address.city %></span>, <span class="region"><%= data.resume.contact_info.address.state %></span> <span class="postal-code"><%= data.resume.contact_info.address.zip_code %></span>
+      </span>
+      <span>E: <a class="email" href="mailto:<%= data.resume.contact_info.email %>"><%= data.resume.contact_info.email %></a></span>
+      <span>P: <a class="tel" href="tel:<%= data.resume.contact_info.phone %>"><%= data.resume.contact_info.phone %></a></span>
+      <% data.resume.contact_info.links.each do |l| %>
+      <span><%= l.name%>: <a href="<%= l.url %>"><%= l.id %></a></span>
+      <% end %>
+    </address>
+  </div><!-- contact -->  
+  <div id="summary">
+    <p class="summary"><%= data.resume.summary %></p>
+  </div><!-- summary -->
+  <div id="experience" class="vcalendar">
+  <% data.resume.experience.each do |e| %>
+    <div id="<%= e.employer.gsub(' ', '-').downcase %>" class="experience vevent">
+      <span class="location"><%= e.employer %></span>
+      <abbr class="dtstart"><%= e.start_date %></abbr> - <abbr class="dtend"><%= e.end_date %></abbr>
+    </div>
+  <% end %>
+  </div><!-- experience -->
+  <div id="education" class="vcalendar">
+  <% data.resume.education.each do |e| %>
+    <div id="<%= e.institution.gsub(' ', '-').downcase %>" class="education vevent">
+      <div class="summary vcard">
+        <span class="org"><%= e.institution %></span>
+        <div class="adr">
+          <span class="locality"><%= e.city %></span>
+          <span class="region"><%= e.state %></span>
+        </div>
+        <abbr class="dtstart"><%= e.start_date %></abbr> - <abbr class="dtend"><%= e.end_date %></abbr>
+      </div>
+  <% end %>
+  </div><!-- education -->
+  <div id="certifications" class="affiliation">
+  <% data.resume.certifications.each do |c| %>
+    <div id="<%= c.name.gsub(' ', '-').downcase %>" class="affiliation vcard">
+      <span class="org"><%= c.name %></span>
+      <span class="dtstart"><%= c.start_date %></span>
+      <span class="dtend"><%= c.end_date %></span>
+    </div>
+  <% end %>
+  </div><!-- certifications -->
+</div><!-- resume -->     
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          

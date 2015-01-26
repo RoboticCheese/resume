@@ -3,7 +3,7 @@ contact_info:
     first: Jonathan
     middle: D
     last: Hartman
-  phone: (703) 868-7573
+  phone: 703-868-7573
   email: j@p4nt5.com
   address:
     city: Seattle
@@ -20,7 +20,7 @@ contact_info:
     - name: Twitter
       id: "@roboticcheese"
       url: https://twitter.com/roboticcheese
-      icon: 
+      icon: fa fa-twitter-square fa-2x
 
 summary: Systems Engineer passionate about automation, testing, and the continuing evolution of DevOps practices.
 
@@ -51,13 +51,13 @@ experience:
         start_date: 2011
         end_date: 2012
         highlights:
-          - Began adoption of Chef to better automate server provisioning and configuration 
+          - Began adoption of Chef to better automate server provisioning and configuration
           - "Wrote Lua and Sieve modules and tests for Message Systems' Momentum MTA"
       - title: Anti-Abuse Engineer
         start_date: 2010
         end_date: 2011
         highlights:
-          - Responsible for all email anti-spam systems and spearheading new anti-spam efforts 
+          - Responsible for all email anti-spam systems and spearheading new anti-spam efforts
           - Wrote a Microsoft Outlook plugin for reporting spam filtering errors
           - Wrote a spam classification app using Google Prediction API
       - title: Engineering Team Lead
@@ -73,20 +73,20 @@ experience:
           - Handled all operations duties for a rapidly-growing, enterprise email hosting startup
           - Served as the main escalation point for support requests
           - Worked with CTO and System Architect to begin automation of server provisioning
-    - employer: Micro Electronics, Inc.
-      start_date: 2001
-      end_date: 2005
-      roles:
-        - title: Merchandising
-          start_date: 2004
-          end_date: 2005
-          highlights:
-            - Worked with store managers to plan and execute product display placement
-        - title: Sales/Support
-          start_date: 2001
-          end_date: 2004
-          highlights:
-            - Provided in-person and phone support for retail consumer electronics purchases
+  - employer: Micro Electronics, Inc.
+    start_date: 2001
+    end_date: 2005
+    roles:
+      - title: Merchandising
+        start_date: 2004
+        end_date: 2005
+        highlights:
+          - Worked with store managers to plan and execute product display placement
+      - title: Sales/Support
+        start_date: 2001
+        end_date: 2004
+        highlights:
+          - Provided in-person and phone support for retail consumer electronics purchases
 
 education:
   - institution: George Mason University
