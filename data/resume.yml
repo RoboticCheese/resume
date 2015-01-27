@@ -70,6 +70,7 @@ experience:
       - title: Customer Support Engineer
         start_date: 2005
         end_date: 2007
+        highlights:
           - Handled all operations duties for a rapidly-growing, enterprise email hosting startup
           - Served as the main escalation point for support requests
           - Worked with CTO and System Architect to begin automation of server provisioning

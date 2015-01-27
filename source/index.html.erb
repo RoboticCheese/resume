@@ -25,6 +25,17 @@ title: Résumé for <%= data.resume.contact_info.name.values.join(' ') %>
     <div id="<%= e.employer.gsub(' ', '-').downcase %>" class="experience vevent">
       <span class="location"><%= e.employer %></span>
       <abbr class="dtstart"><%= e.start_date %></abbr> - <abbr class="dtend"><%= e.end_date %></abbr>
+      <% e.roles.each do |r| %>
+        <div id="<%= r.title.gsub(' ', '-').downcase %>" class="vcard">
+          <span class="title"><%= r.title %></span>
+          <abbr class="dtstart"><%= r.start_date %></abbr> - <abbr class="dtend"><%= r.end_date %></abbr>
+          <ul>
+          <% r.highlights.each do |h| %>
+            <li><%= h %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
     </div>
   <% end %>
   </div><!-- experience -->
