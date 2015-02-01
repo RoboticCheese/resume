@@ -35,38 +35,37 @@
     </div>
   <% end %>
   </div><!-- experience -->
-  <div id="education" class="vcalendar">
-  <% data.resume.education.each do |e| %>
-    <div id="<%= e.institution.gsub(' ', '-').downcase %>" class="education vevent">
-      <div class="summary vcard">
-        <span class="org"><%= e.institution %></span>
-        <div class="adr">
-          <span class="locality"><%= e.city %></span>
-          <span class="region"><%= e.state %></span>
-        </div>
-        <abbr class="dtstart"><%= e.start_date %></abbr> - <abbr class="dtend"><%= e.end_date %></abbr>
+
+  <div id="education" class="panel panel-default vcalendar">
+    <div class="panel-heading">
+      <h3 class="panel-title">Education</h3>
+    </div>
+    <% data.resume.education.each do |e| %>
+      <div class="panel panel-default education vevent">
+        <div class="panel-body summary vcard">
+          <span class="org"><%= e.institution %></span>
+          <div class="adr">
+            <span class="locality"><%= e.city %></span>
+            <span class="region"><%= e.state %></span>
+          </div>
+          <abbr class="dtstart"><%= e.start_date %></abbr> - <abbr class="dtend"><%= e.end_date %></abbr>
       </div>
-  <% end %>
+    <% end %>
   </div><!-- education -->
-  <div id="certifications" class="affiliation">
-  <% data.resume.certifications.each do |c| %>
-    <div id="<%= c.name.gsub(' ', '-').downcase %>" class="affiliation vcard">
-      <span class="org"><%= c.name %></span>
-      <span class="dtstart"><%= c.start_date %></span>
-      <span class="dtend"><%= c.end_date %></span>
+
+  <div id="certifications" class="panel panel-default affiliation">
+    <div class="panel-heading">
+      <h3 class="panel-title">Certifications</h3>
+    </div>
+    <% data.resume.certifications.each do |c| %>
+      <div class="panel panel-default affiliation vcard">
+        <div class="panel-body">
+          <span class="org"><%= c.name %></span>,
+          <span class="dtstart"><%= c.start_date %></span> -
+          <span class="dtend"><%= c.end_date %></span>
+        </div>
+      </div>
     </div>
   <% end %>
   </div><!-- certifications -->
 </div><!-- resume -->     
-                          
-                          
-                          
-                          
-                          
-                          
-                          
-                          
-                          
-                          
-                          
-                          

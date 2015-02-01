@@ -4,6 +4,9 @@ gem 'middleman'
 gem 'middleman-deploy'
 gem 'middleman-livereload'
 
+gem 'bootstrap-sass'
+gem 'font-awesome-sass'
+
 # For faster file watcher updates on Windows
 gem 'wdm', platforms: [:mswin, :mingw]
 
