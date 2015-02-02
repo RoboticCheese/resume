@@ -65,10 +65,13 @@ configure :build do
   # activate :asset_hash
 
   # Use relative URLs
-  # activate :relative_assets
+  activate :relative_assets
 
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
+
+  # Build a PDF artifact
+  activate :pdfkit
 
   # Enable deployment to GitHub Pages
   activate :deploy do |deploy|
