@@ -13,6 +13,15 @@
   </head>
   
   <body class="<%= page_classes %>">
+    <nav class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="<%= request.path.sub(/\.html$/, '.pdf') %>"><i class="fa fa-file-pdf-o"></i> Download PDF</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
     <%= yield %>
 
     <%= javascript_include_tag  'all' %>
