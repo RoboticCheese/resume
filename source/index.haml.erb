@@ -52,6 +52,9 @@
               %span.region= e.state
             %abbr.dtstart= e.start_date
             %abbr.dtend= e.end_date
+            %ul
+              - e.curriculum.each do |c|
+                %li= c
   #certifications.panel.panel-primary.affiliation
     .panel-heading
       %h4.panel-title Certifications
