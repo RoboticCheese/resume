@@ -28,12 +28,14 @@
             %span.location
               %h4= e.employer
             %abbr.dtstart= e.start_date
+            %span -
             %abbr.dtend= e.end_date
             - e.roles.each do |r|
               .vcard
                 %em
                   %span.title= r.title
                   %abbr.dtstart= r.start_date
+                  %span -
                   %abbr.dtend= r.end_date
                 %ul
                   - r.highlights.each do |h|
@@ -51,6 +53,7 @@
               %span.locality= e.city
               %span.region= e.state
             %abbr.dtstart= e.start_date
+            %span -
             %abbr.dtend= e.end_date
             %ul
               - e.curriculum.each do |c|
@@ -64,4 +67,5 @@
           .panel-body
             %span.org= c.name
             %span.dtstart= c.start_date
+            %span -
             %span.dtend= c.end_date
