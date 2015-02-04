@@ -13,27 +13,34 @@
       <% end %>
     </address>
   </div><!-- contact -->  
+
   <div id="summary">
     <p class="summary"><%= data.resume.summary %></p>
   </div><!-- summary -->
-  <div id="experience" class="vcalendar">
-  <% data.resume.experience.each do |e| %>
-    <div id="<%= e.employer.gsub(' ', '-').downcase %>" class="experience vevent">
-      <span class="location"><%= e.employer %></span>
-      <abbr class="dtstart"><%= e.start_date %></abbr> - <abbr class="dtend"><%= e.end_date %></abbr>
-      <% e.roles.each do |r| %>
-        <div id="<%= r.title.gsub(' ', '-').downcase %>" class="vcard">
-          <span class="title"><%= r.title %></span>
-          <abbr class="dtstart"><%= r.start_date %></abbr> - <abbr class="dtend"><%= r.end_date %></abbr>
-          <ul>
-          <% r.highlights.each do |h| %>
-            <li><%= h %></li>
-          <% end %>
-          </ul>
-        </div>
-      <% end %>
+
+  <div id="experience" class="panel panel-default vcalendar">
+    <div class="panel-heading">
+      <h3 class="panel-title">Experience</h3>
     </div>
-  <% end %>
+    <% data.resume.experience.each do |e| %>
+      <div class="experience vevent">
+        <span class="location"><h4><%= e.employer %></h4></span>
+        <abbr class="dtstart"><%= e.start_date %></abbr> - <abbr class="dtend"><%= e.end_date %></abbr>
+        <% e.roles.each do |r| %>
+          <div class="vcard">
+            <em>
+              <span class="title"><%= r.title %></span>
+              (<abbr class="dtstart"><%= r.start_date %></abbr> - <abbr class="dtend"><%= r.end_date %></abbr>)
+            </em>
+            <ul>
+            <% r.highlights.each do |h| %>
+              <li><%= h %></li>
+            <% end %>
+            </ul>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
   </div><!-- experience -->
 
   <div id="education" class="panel panel-default vcalendar">
