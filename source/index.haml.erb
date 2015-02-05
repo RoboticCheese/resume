@@ -40,9 +40,12 @@
               .vcard
                 %em
                   %span.title= r.title
-                  %abbr.dtstart= r.start_date
-                  %span -
-                  %abbr.dtend= r.end_date
+                  %span
+                    (
+                    %abbr.dtstart= r.start_date
+                    %span -
+                    %abbr.dtend= r.end_date
+                    )
                 %ul
                   - r.highlights.each do |h|
                     %li= h
