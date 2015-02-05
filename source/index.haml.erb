@@ -5,14 +5,17 @@
     .panel-body
       %address.vcard
         %span.fn= data.resume.contact_info.name.values.join(' ')
-        %span.adr
-          %span.street-address= data.resume.contact_info.address.street
-          %span.locality= data.resume.contact_info.address.city
-          %span.region= data.resume.contact_info.address.state
-          %span.postal-code= data.resume.contact_info.address.zip_code
-        %span
-          %i(class="fa fa-envelope-o")
-          %a.email{href: "mailto:#{data.resume.contact_info.email}"}= data.resume.contact_info.email
+        .row
+          .col-md-8
+            %span.adr
+              %span.street-address= data.resume.contact_info.address.street
+              %span.locality= data.resume.contact_info.address.city
+              %span.region= data.resume.contact_info.address.state
+              %span.postal-code= data.resume.contact_info.address.zip_code
+          .col-md-4
+            %span
+              %i(class="fa fa-envelope-o")
+              %a.email{href: "mailto:#{data.resume.contact_info.email}"}= data.resume.contact_info.email
   #summary.panel.panel-primary
     .panel-heading
       %h4.panel-title Summary
@@ -25,11 +28,14 @@
       - data.resume.experience.each do |e|
         .panel.panel-default.experience.vevent
           .panel-body
-            %span.location
-              %h4= e.employer
-            %abbr.dtstart= e.start_date
-            %span -
-            %abbr.dtend= e.end_date
+            %h4
+              .row
+                .col-md-8
+                  %span.location= e.employer
+                .col-md-4
+                  %abbr.dtstart= e.start_date
+                  %span -
+                  %abbr.dtend= e.end_date
             - e.roles.each do |r|
               .vcard
                 %em
@@ -47,14 +53,18 @@
       - data.resume.education.each do |e|
         .panel.panel-default.education.vevent
           .panel-body.summary.vcard
-            %span.org
-              %h4= e.institution
-            .addr
-              %span.locality= e.city
-              %span.region= e.state
-            %abbr.dtstart= e.start_date
-            %span -
-            %abbr.dtend= e.end_date
+            %h4
+              .row
+                .col-md-4
+                  %span.org= e.institution
+                .col-md-4
+                  .addr
+                    %span.locality #{e.city},
+                    %span.region= e.state
+                .col-md-4
+                  %abbr.dtstart= e.start_date
+                  %span -
+                  %abbr.dtend= e.end_date
             %ul
               - e.curriculum.each do |c|
                 %li= c
