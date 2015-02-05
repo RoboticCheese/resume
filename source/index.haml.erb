@@ -65,9 +65,7 @@
                   %abbr.dtstart= e.start_date
                   %span -
                   %abbr.dtend= e.end_date
-            %ul
-              - e.curriculum.each do |c|
-                %li= c
+            %span= e.curriculum.join(', ')
   #certifications.panel.panel-primary.affiliation
     .panel-heading
       %h4.panel-title Certifications
