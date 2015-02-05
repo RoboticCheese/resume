@@ -1,3 +1,7 @@
+project:
+  url: https://github.com/roboticcheese/resume
+  icon: fa fa-github-square
+
 contact_info:
   name:
     first: Jonathan

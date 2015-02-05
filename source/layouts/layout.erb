@@ -17,7 +17,8 @@
       <nav class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
           <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-              <li><a href="<%= request.path.sub(/\.html$/, '.pdf') %>"><i class="fa fa-file-pdf-o"></i> Download PDF</a></li>
+              <li><a href="<%= request.path.sub(/\.html$/, '.pdf') %>"><i class="fa fa-file-pdf-o"></i> Download the PDF</a></li>
+              <li><a href="<%= data.resume.project.url %>"><i class="<%= data.resume.project.icon %>"></i> Check out the Source</a></li>
             </ul>
           </div>
       </nav>
