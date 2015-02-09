@@ -71,7 +71,9 @@ configure :build do
   # set :http_prefix, "/Content/images/"
 
   # Build a PDF artifact
-  activate :pdfkit
+  activate :pdfkit do |pdfkit|
+    pdfkit.filenames = %w(resume)
+  end
 
   # Enable deployment to GitHub Pages
   activate :deploy do |deploy|

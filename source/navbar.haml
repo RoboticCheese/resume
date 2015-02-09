@@ -1,0 +1,11 @@
+%nav.navbar.navbar-inverse.navbar-fixed-bottom{role: 'navigation'}
+  .collapse.navbar-collapse
+    %ul.nav.navbar-nav
+      %li
+        %a{href: File.join(current_page.url, 'resume.pdf')}
+          %i.fa.fa-file-pdf-o
+          Download the PDF
+      %li
+        %a{href: data.resume.project.url}
+          %i{class: data.resume.project.icon}
+          Check out the source
