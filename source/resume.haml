@@ -39,8 +39,12 @@
           .panel-body
             %h4
               .row
-                .col-xs-8
+                .col-xs-4
                   %span.location= e.employer
+                .col-xs-4
+                  .addr
+                    %span.locality #{e.city},
+                    %span.region= e.state
                 .col-xs-4
                   %abbr.dtstart= e.start_date
                   %span -

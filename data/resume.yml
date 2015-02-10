@@ -1,6 +1,6 @@
 project:
   url: https://github.com/roboticcheese/resume
-  icon: fa fa-github-square
+  icon: fa-github-square
 
 contact_info:
   name:
@@ -30,6 +30,8 @@ summary: Systems Engineer passionate about automation, testing, and the continui
 
 experience:
   - employer: Self
+    city: Seattle
+    state: WA
     start_date: 03/2014
     end_date: Present
     roles:
@@ -42,6 +44,8 @@ experience:
           - Replacing personal cloud servers with a Docker ecosystem cluster
   - employer: Rackspace Hosting
     note: prev. Webmail.us, acquired 2007
+    city: Blacksburg
+    state: VA
     start_date: 12/2005
     end_date: 03/2014
     roles:
@@ -79,6 +83,8 @@ experience:
           - Served as the main escalation point for support requests
           - Worked with CTO and System Architect to begin automation of server provisioning
   - employer: Micro Electronics, Inc.
+    city: Fairfax
+    state: VA
     start_date: 2001
     end_date: 2005
     roles:

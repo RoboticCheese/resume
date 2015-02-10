@@ -3,9 +3,9 @@
     %ul.nav.navbar-nav
       %li
         %a{href: File.join(current_page.url, 'resume.pdf')}
-          %i.fa.fa-file-pdf-o
+          %i.fa.fa-file-pdf-o.fa-lg
           Download the PDF
       %li
         %a{href: data.resume.project.url}
-          %i{class: data.resume.project.icon}
+          %i{class: "fa #{data.resume.project.icon} fa-lg"}
           Check out the source
