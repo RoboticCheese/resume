@@ -16,15 +16,15 @@ contact_info:
     - name: LinkedIn
       id: roboticcheese
       url: https://www.linkedin.com/in/roboticcheese
-      icon: fa fa-linkedin-square
+      icon: fa-linkedin-square
     - name: GitHub
       id: roboticcheese
       url: https://github.com/roboticcheese
-      icon: fa fa-github-square
+      icon: fa-github-square
     - name: Twitter
       id: "@roboticcheese"
       url: https://twitter.com/roboticcheese
-      icon: fa fa-twitter-square
+      icon: fa-twitter-square
 
 summary: Systems Engineer passionate about automation, testing, and the continuing evolution of DevOps practices.
 
