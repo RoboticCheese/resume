@@ -9,8 +9,8 @@
         %span.fn.hidden= data.resume.contact_info.name.values.join(' ')
         %span.adr
           %i(class="fa fa-map-marker fa-lg")
-          %span.street-address= data.resume.contact_info.address.street
-          %span.locality= data.resume.contact_info.address.city
+          <span class="street-address">#{data.resume.contact_info.address.street}</span>,
+          <span class="locality">#{data.resume.contact_info.address.city}</span>,
           %span.region= data.resume.contact_info.address.state
           %span.postal-code= data.resume.contact_info.address.zip_code
         %ul.list-inline
@@ -43,22 +43,21 @@
                   %span.location= e.employer
                 .col-xs-4
                   .addr
-                    %span.locality #{e.city},
+                    %span.locality>= e.city
+                    ,
                     %span.region= e.state
                 .col-xs-4
                   %abbr.dtstart= e.start_date
-                  %span -
+                  \-
                   %abbr.dtend= e.end_date
             - e.roles.each do |r|
               .vcard
                 %em
                   %span.title= r.title
                   %span
-                    (
-                    %abbr.dtstart= r.start_date
-                    %span -
-                    %abbr.dtend= r.end_date
-                    )
+                    (<abbr class="dtstart">#{r.start_date}</abbr>
+                    \-
+                    <abbr class="dtend">#{r.end_date}</abbr>)
                 %ul
                   - r.highlights.each do |h|
                     %li= h
@@ -75,11 +74,12 @@
                   %span.org= e.institution
                 .col-xs-4
                   .addr
-                    %span.locality #{e.city},
+                    %span.locality>= e.city
+                    ,
                     %span.region= e.state
                 .col-xs-4
                   %abbr.dtstart= e.start_date
-                  %span -
+                  \-
                   %abbr.dtend= e.end_date
             %span= e.curriculum.join(', ')
   #certifications.panel.panel-primary.affiliation
@@ -91,5 +91,5 @@
           .panel-body
             %span.org= c.name
             %span.dtstart= c.start_date
-            %span -
+            \-
             %span.dtend= c.end_date
