@@ -8,17 +8,17 @@
       %address.vcard
         %span.fn.hidden= data.resume.contact_info.name.values.join(' ')
         %span.adr
-          %i(class="fa fa-globe")
+          %i(class="fa fa-map-marker")
           %span.street-address= data.resume.contact_info.address.street
           %span.locality= data.resume.contact_info.address.city
           %span.region= data.resume.contact_info.address.state
           %span.postal-code= data.resume.contact_info.address.zip_code
         %ul.list-inline
           %li
-            %i(class="fa fa-envelope-o")
+            %i(class="fa fa-envelope-square")
             %a.email{href: "mailto:#{data.resume.contact_info.email}"}= data.resume.contact_info.email
           %li
-            %i(class="fa fa-phone")
+            %i(class="fa fa-phone-square")
             %a.tel{href: "tel:#{data.resume.contact_info.phone}"}= data.resume.contact_info.phone
           - data.resume.contact_info.links.each do |l|
             %li
