@@ -30,6 +30,7 @@
       %h4.panel-title Summary
     .panel-body
       %p.summary= data.resume.summary
+
   #experience.panel.panel-primary.vcalendar
     .panel-heading
       %h4.panel-title Experience
@@ -61,9 +62,10 @@
                 %ul
                   - r.highlights.each do |h|
                     %li= h
+
   #education.panel.panel-primary
     .panel-heading
-      %h3.panel-title Education
+      %h4.panel-title Education
     .panel-body
       - data.resume.education.each do |e|
         .panel.panel-default.education.vevent
@@ -82,6 +84,7 @@
                   \-
                   %abbr.dtend= e.end_date
             %span= e.curriculum.join(', ')
+
   #certifications.panel.panel-primary.affiliation
     .panel-heading
       %h4.panel-title Certifications
@@ -89,7 +92,12 @@
       - data.resume.certifications.each do |c|
         .panel.panel-default.affiliation.vcard
           .panel-body
-            %span.org= c.name
-            %span.dtstart= c.start_date
-            \-
-            %span.dtend= c.end_date
+            %h4
+              .row
+                .col-xs-4
+                  %span.org= c.name
+                .col-xs-4
+                .col-xs-4
+                  %abbr.dtstart= c.start_date
+                  \-
+                  %span.dtend= c.end_date
