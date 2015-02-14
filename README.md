@@ -6,4 +6,4 @@ my résumé. It is inspired by and based in part on the
 [Resume Man](https://github.com/reefab/ResumeMan) template project.
 
 The generated résumé itself (and link for PDF export) can be found
-[here](http://jdh.p4nt5.com).
+[here](http://resume.p4nt5.com).
