@@ -1,0 +1,12 @@
+!!!
+%html{lang: 'en'}
+  %head
+    %meta{charset: 'utf-8'}
+    %meta{content: 'IE=edge,chrome=1', :'http-equiv' => 'X-UA-Compatible'}
+    %meta{name: 'viewport', content: 'width=device-width, initial-scale=1'}
+    %title= "Résumé for #{data.resume.contact_info.name.values.join(' ')}"
+    = stylesheet_link_tag 'print'
+  %body{class: page_classes}
+    .container-fluid
+      = yield
+      = javascript_include_tag 'all'
