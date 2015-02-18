@@ -76,10 +76,10 @@ configure :build do
   activate :pdfkit do |pdfkit|
     pdfkit.filenames = %w(resume)
   end
+end
 
-  # Enable deployment to GitHub Pages
-  activate :deploy do |deploy|
-    deploy.build_before = true
-    deploy.method = :git
-  end
+# Enable deployment to GitHub Pages
+activate :deploy do |deploy|
+  deploy.build_before = true
+  deploy.method = :git
 end
