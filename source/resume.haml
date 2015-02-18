@@ -9,10 +9,10 @@
         %ul.list-inline
           %li
             %span.fn.hidden= data.resume.contact_info.name.values.join(' ')
-            %span.adr
             %i(class='fa fa-map-marker fa-lg')
-            <span class="locality">#{data.resume.contact_info.address.city}</span>,
-            %span.region= data.resume.contact_info.address.state
+            %a.adr{href: "https://www.google.com/maps/place/#{data.resume.contact_info.address.city},+#{data.resume.contact_info.address.state}"}
+              <span class="locality">#{data.resume.contact_info.address.city}</span>,
+              %span.region= data.resume.contact_info.address.state
           %li
             %i(class='fa fa-envelope-square fa-lg')
             %a.email{href: "mailto:#{data.resume.contact_info.email}"}= data.resume.contact_info.email
