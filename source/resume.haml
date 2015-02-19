@@ -11,7 +11,8 @@
             %span.fn.hidden= data.resume.contact_info.name.values.join(' ')
             %i{class: 'fa fa-map-marker fa-lg'}
             %a.adr{href: "https://www.google.com/maps/place/#{data.resume.contact_info.address.city},+#{data.resume.contact_info.address.state}"}
-              <span class="locality">#{data.resume.contact_info.address.city}</span>,
+              = succeed ',' do
+                %span.locality= data.resume.contact_info.address.city
               %span.region= data.resume.contact_info.address.state
           %li
             %i{class: 'fa fa-envelope-square fa-lg'}
@@ -55,9 +56,10 @@
                 %em
                   %span.title= r.title
                   %span
-                    (<abbr class="dtstart">#{r.start_date}</abbr>
-                    \-
-                    <abbr class="dtend">#{r.end_date}</abbr>)
+                    = surround '(', ')' do
+                      %abbr.dtstart= r.start_date
+                      \-
+                      %abbr.dtend= r.end_date
                 %ul
                   - r.highlights.each do |h|
                     %li= h
