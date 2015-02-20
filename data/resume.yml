@@ -28,6 +28,20 @@ contact_info:
 
 summary: Systems Engineer passionate about automation, testing, and the continuing evolution of DevOps practices.
 
+skills:
+  - Chef
+  - Test Kitchen
+  - Vagrant
+  - Ruby
+  - Python
+  - Jenkins
+  - Postfix
+  - Nagios
+  - GitHub
+  - Keepalived
+  - iptables
+  - DRBD
+
 experience:
   - employer: Self
     city: Seattle

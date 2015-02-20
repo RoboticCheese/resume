@@ -31,6 +31,16 @@
     .panel-body
       %p.summary= data.resume.summary
 
+  #skills.panel.panel-primary
+    .panel-heading
+      %h4.panel-title Skills
+    .panel-body
+      .row
+        - data.resume.skills.each do |s|
+          .col-xs-3
+            %i{class: 'fa fa-asterisk'}
+            %span.skill= s
+
   #experience.panel.panel-primary.vcalendar
     .panel-heading
       %h4.panel-title Experience
