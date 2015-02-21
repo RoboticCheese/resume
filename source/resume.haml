@@ -36,12 +36,15 @@
       %h4.panel-title Skills
     .panel-body
       .row
-        - 4.times.each do |col|
+        - @cols = 4
+        - @items_per_col = (data.resume.skills.length / @cols.to_f).ceil
+        - @cols.times.each do |col|
           .col-xs-3
             %ul
-              - (data.resume.skills.length / 4).times.each do |item|
-                %li
-                  %span.skill= data.resume.skills[col * data.resume.skills.length / 4 + item]
+              - @items_per_col.times.each do |item|
+                - unless data.resume.skills[col * @items_per_col + item].nil?
+                  %li
+                    %span.skill= data.resume.skills[col * @items_per_col + item]
 
   #experience.panel.panel-primary.vcalendar
     .panel-heading
