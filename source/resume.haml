@@ -36,10 +36,12 @@
       %h4.panel-title Skills
     .panel-body
       .row
-        - data.resume.skills.each do |s|
+        - 4.times.each do |col|
           .col-xs-3
-            %i{class: 'fa fa-asterisk'}
-            %span.skill= s
+            %ul
+              - (data.resume.skills.length / 4).times.each do |item|
+                %li
+                  %span.skill= data.resume.skills[col * data.resume.skills.length / 4 + item]
 
   #experience.panel.panel-primary.vcalendar
     .panel-heading
