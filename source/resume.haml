@@ -39,7 +39,7 @@
         - @cols = 4
         - @items_per_col = (data.resume.skills.length / @cols.to_f).ceil
         - @cols.times.each do |col|
-          .col-xs-3
+          .col-sm-3
             %ul
               - @items_per_col.times.each do |item|
                 - unless data.resume.skills[col * @items_per_col + item].nil?
@@ -55,14 +55,14 @@
           .panel-body
             %h4
               .row
-                .col-xs-4
+                .col-sm-4
                   %span.location= e.employer
-                .col-xs-4
+                .col-sm-4
                   .addr
                     %span.locality>= e.city
                     ,
                     %span.region= e.state
-                .col-xs-4
+                .col-sm-4
                   %abbr.dtstart= e.start_date
                   \-
                   %abbr.dtend= e.end_date
@@ -88,14 +88,14 @@
           .panel-body.summary.vcard
             %h4
               .row
-                .col-xs-4
+                .col-sm-4
                   %span.org= e.institution
-                .col-xs-4
+                .col-sm-4
                   .addr
                     %span.locality>= e.city
                     ,
                     %span.region= e.state
-                .col-xs-4
+                .col-sm-4
                   %abbr.dtstart= e.start_date
                   \-
                   %abbr.dtend= e.end_date
@@ -110,10 +110,10 @@
           .panel-body
             %h4
               .row
-                .col-xs-4
+                .col-sm-4
                   %span.org= c.name
-                .col-xs-4
-                .col-xs-4
+                .col-sm-4
+                .col-sm-4
                   %abbr.dtstart= c.start_date
                   \-
                   %span.dtend= c.end_date
