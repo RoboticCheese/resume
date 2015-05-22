@@ -67,7 +67,7 @@ experience:
         start_date: 2012
         end_date: 2014
         highlights:
-          - Led adoption of Test-Driven Infrastructure practices and tools
+          - Led adoption of test-driven infrastructure practices and tools
           - Served as escalation point for outages and general infrastructure queries
       - title: Linux Systems Engineer III, SMTP
         start_date: 2011
