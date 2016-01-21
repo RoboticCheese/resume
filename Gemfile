@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'middleman'
+gem 'middleman', '~> 3.4'
 gem 'middleman-deploy'
 gem 'middleman-livereload'
 gem 'middleman-pdfkit'
