@@ -31,11 +31,13 @@ summary: Systems Engineer passionate about automation, testing, and the continui
 skills:
   - Chef
   - Test Kitchen
+  - AWS
   - Vagrant
   - Ruby
   - Python
   - Jenkins
   - Postfix
+  - Sensu
   - Nagios
   - GitHub
   - Keepalived
@@ -43,19 +45,31 @@ skills:
   - DRBD
 
 experience:
+  - employer: Socrata, Inc.
+    city: Seattle
+    state: WA
+    start_date: 07/2015
+    end_date: Present
+    roles:
+      - title: Site Reliability Engineer
+        start_date: 07/2015
+        end_date: Present
+        highlights:
+          - Migrating legacy colo infrastructure to AWS
+          - Evaluating Terraform and Chef-Provisioning as alternatives to AWS CloudFormation
+          - Prototyping new Chef workflows for higher-frequency deploys
   - employer: Self
     city: Seattle
     state: WA
     start_date: 03/2014
     end_date: Present
     roles:
-      - title: Engineering Ronin
+      - title: Part-Time Community Engineer
         start_date: 03/2014
         end_date: Present
         highlights:
           - Authoring new Chef community cookbooks and Ruby libraries
           - Learning new system languages, e.g. Go and Rust
-          - Replacing personal cloud servers with a Docker ecosystem cluster
   - employer: Rackspace Hosting
     note: prev. Webmail.us, acquired 2007
     city: Blacksburg
